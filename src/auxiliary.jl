@@ -73,9 +73,7 @@ function fastlm(x::Matrix{Float64},y::Vector{Float64})::Vector{Float64}
 end
 
 
-
-
-function eval_tree(x,tree)::Vector{Float64}
+function eval_tree(x::Matrix{Float64},tree::Matrix{Float64})::Vector{Float64}
     N::Int64 = size(x)[1]
     terminalnodes::Vector{Int64} = find(x->(x==1),tree[:,6])
     terminal::Matrix{Float64} = tree[terminalnodes,:]
@@ -115,7 +113,6 @@ function eval_tree(x,tree)::Vector{Float64}
     return fitted
 end
 
-   
 
 function grow_tree(x::Matrix{Float64},y::Vector{Float64},p::Float64,d_max::Int64,gamma::Vector{Float64},node_obs::Int64)::Tuple{Array{Float64,2},Array{Float64,1}}
     

@@ -50,14 +50,13 @@ function BoostMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Floa
 end
 
 
-
 function predictBoost(object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64, Vector{Float64}},newx::Matrix{Float64})::Vector{Float64}
     v::Float64 = object[5][1]
     y0::Float64 = object[4]
     rho::Vector{Float64} = object[7]
     model::Dict{Float64,Array{Float64,2}} = object[1]
     rhov::Vector{Float64} = rho*v
-    N::Int64 = size(x,1)
+    N::Int64 = size(newx,1)
     M::Int64 = object[5][5]
     fittedaux::Matrix{Float64} = Matrix{Float64}(N,M)
     fitted::Vector{Float64} = Vector{Float64}(N)
