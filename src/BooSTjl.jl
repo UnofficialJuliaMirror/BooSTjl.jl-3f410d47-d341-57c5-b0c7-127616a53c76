@@ -1,6 +1,6 @@
 module BooSTjl
 
-export Boost, BoostMore, estimate_derivatives, predictBoost
+export BooST, BooSTMore, estimate_derivatives, predictBooST
 
 using StatsBase
 using Base.LinAlg.BLAS

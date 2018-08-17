@@ -14,7 +14,7 @@ function estimate_derivatives(object::Tuple{Dict{Float64,Array{Float64,2}},Array
     return derivative
 end
 
-function BoostMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64, Vector{Float64}}, M::Int64, display::Bool)::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Vector{Float64}}
+function BooSTMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64, Vector{Float64}}; M::Int64=50, display::Bool=true)::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Vector{Float64}}
 
     (v::Float64,p::Float64,d_max::Int64,gamma::Vector{Float64},Mold::Int64,node_obs::Int64) = object[5]
     params::Tuple{Float64,Float64,Int64,Vector{Float64},Int64,Float64} = (v,p,d_max,gamma,M+Mold,node_obs)
@@ -24,7 +24,7 @@ function BoostMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Floa
     save_rho[1:Mold] = object[7]
     ybar::Float64 = object[4]
     N::Int64 = length(y)
-    phi::Vector{Float64} = predictBoost(object,x)
+    phi::Vector{Float64} = predictBooST(object,x)
     brmse::Vector{Float64} = Vector{Float64}(Mold+M)
     save_tree::Dict{Float64,Array{Float64,2}} = object[1]
     brmse[1:Mold] = object[3]
@@ -50,7 +50,7 @@ function BoostMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Floa
 end
 
 
-function predictBoost(object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64, Vector{Float64}},newx::Matrix{Float64})::Vector{Float64}
+function predictBooST(object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64, Vector{Float64}},newx::Matrix{Float64})::Vector{Float64}
     v::Float64 = object[5][1]
     y0::Float64 = object[4]
     rho::Vector{Float64} = object[7]
@@ -69,7 +69,7 @@ end
 
 
 
-function Boost(x::Matrix{Float64},y::Vector{Float64},v::Float64, p::Float64, d_max::Int64, gamma::Vector{Float64}, M::Int64, display::Bool, node_obs::Int64)::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Vector{Float64}}
+function BooST(x::Matrix{Float64},y::Vector{Float64}; v::Float64 = 0.2, p::Float64 = 2/3, d_max::Int64 = 4, gamma::Vector{Float64} = collect(0.5:0.01:5), M::Int64 = 300, display::Bool = true, node_obs::Int64 = 1)::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Vector{Float64}}
 
     params::Tuple{Float64,Float64,Int64,Vector{Float64},Int64,Float64} = (v,p,d_max,gamma,M,node_obs)
     d_max::Int64 = d_max-1
