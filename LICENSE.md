@@ -1,8 +1,6 @@
 The BooSTjl.jl package is licensed under the MIT "Expat" License:
-YEAR: 2018
-COPYRIGHT HOLDER: Gabriel F. R. Vasconcelos 
 
-> Copyright (c) 2018: gabrielrvsc.
+> Copyright (c) 2018: Gabriel F. R. Vasconcelos.
 >
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
