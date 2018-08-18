@@ -2,6 +2,12 @@
 
 Set of functions to estimate the BooST model 
 
+## Instalation
+
+```
+Pkg.clone("git@github.com:gabrielrvsc/BooSTjl.jl.git")
+```
+
 ## List of Functions
 
 - `BooST` estimates the BooST
