@@ -34,7 +34,7 @@ save_tree, phi, brmse, ybar, params, nvar, save_rho
   * **`rho`** Vector with the parameter phi estimated in each iteration
 
 
-<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/e48dc86d909db17f5427044d66383bfe3729fbf8/src/export.jl#L108-L137' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/3ffe5b6cd888b5e37dbf01debcbd39074b49b71f/src/export.jl#L108-L137' class='documenter-source'>source</a><br>
 
 <a id='BooSTjl.estimate_derivatives-Tuple{Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}},Array{Float64,2},Int64}' href='#BooSTjl.estimate_derivatives-Tuple{Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}},Array{Float64,2},Int64}'>#</a>
 **`BooSTjl.estimate_derivatives`** &mdash; *Method*.
@@ -54,7 +54,7 @@ estimate_derivatives(object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,
 Returns the derivative of y with respect to `x[:,variable]`.
 
 
-<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/e48dc86d909db17f5427044d66383bfe3729fbf8/src/export.jl#L3-L13' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/3ffe5b6cd888b5e37dbf01debcbd39074b49b71f/src/export.jl#L3-L13' class='documenter-source'>source</a><br>
 
 <a id='BooSTjl.predictBooST-Tuple{Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}},Array{Float64,2}}' href='#BooSTjl.predictBooST-Tuple{Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}},Array{Float64,2}}'>#</a>
 **`BooSTjl.predictBooST`** &mdash; *Method*.
@@ -73,7 +73,7 @@ predictBooST(object::Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array
 Returns predicted values from a BooST model. If `newx = x` returns the fitted values.
 
 
-<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/e48dc86d909db17f5427044d66383bfe3729fbf8/src/export.jl#L80-L89' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/3ffe5b6cd888b5e37dbf01debcbd39074b49b71f/src/export.jl#L80-L89' class='documenter-source'>source</a><br>
 
 <a id='BooSTjl.BooSTMore-Tuple{Array{Float64,2},Array{Float64,1},Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}}}' href='#BooSTjl.BooSTMore-Tuple{Array{Float64,2},Array{Float64,1},Tuple{Dict{Float64,Array{Float64,2}},Array{Float64,1},Array{Float64,1},Float64,Tuple{Float64,Float64,Int64,Array{Float64,1},Int64,Float64},Int64,Array{Float64,1}}}'>#</a>
 **`BooSTjl.BooSTMore`** &mdash; *Method*.
@@ -95,5 +95,5 @@ BooSTMore(x::Matrix{Float64},y::Vector{Float64},object::Tuple{Dict{Float64,Array
 Estimates more trees for a previously estimated BooST and returns the updated BooST.
 
 
-<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/e48dc86d909db17f5427044d66383bfe3729fbf8/src/export.jl#L31-L43' class='documenter-source'>source</a><br>
+<a target='_blank' href='https://github.com/gabrielrvsc/BooSTjl/blob/3ffe5b6cd888b5e37dbf01debcbd39074b49b71f/src/export.jl#L31-L43' class='documenter-source'>source</a><br>
 
