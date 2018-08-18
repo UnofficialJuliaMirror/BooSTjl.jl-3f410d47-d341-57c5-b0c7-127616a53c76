@@ -2,7 +2,7 @@
 
 Set of functions to estimate the BooST model 
 
-## Instalation
+## Installation
 
 ```
 Pkg.clone("https://github.com/gabrielrvsc/BooSTjl.jl")
