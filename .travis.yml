@@ -10,7 +10,7 @@ notifications:
   email: false
 branches:
   only:
-- master
+    - master
 
 ## uncomment and modify the following lines to manually install system packages
 #addons:
