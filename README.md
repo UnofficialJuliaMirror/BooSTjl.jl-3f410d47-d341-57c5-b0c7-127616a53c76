@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.com/gabrielrvsc/BooSTjl.jl.svg?branch=master)](https://travis-ci.com/gabrielrvsc/BooSTjl.jl)
+
 # BooSTjl
 
 Set of functions to estimate the BooST model 
